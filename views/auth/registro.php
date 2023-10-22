@@ -37,13 +37,11 @@
             name="password2">
         </div>
 
-        <input type="submit" class="formulario__submit" value="Iniciar Sesion">
+        <input type="submit" class="formulario__submit" value="Crear cuenta">
 
     </form>
     <div class="acciones">
-        <a href="/registro"
-        class="acciones__enlace">Aun no tienes cuenta? Obtener una</a>
-        <a href="/olvide"
-        class="acciones__enlace">Olvidaste tu password?</a>
+        <a href="/login"
+        class="acciones__enlace">Ya tienes cuenta? Iniciar sesion</a>
     </div>
 </main>

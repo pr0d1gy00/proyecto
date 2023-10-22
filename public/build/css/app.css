@@ -165,7 +165,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-  -webkit-appearance: button;
+  appearance: button;
 }
 
 /**
@@ -248,7 +248,7 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield; /* 1 */
+  appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
 
@@ -335,11 +335,31 @@ h2 {
 h3 {
   font-size: 3rem;
 }
-
+.header__contenedor{
+  width: min(95%,140rem);
+  margin: 0 auto;
+}
 .text-center {
   text-align: center;
 }
+.header{
+  min-height: 60rem;
+  background-image: url(../img/grafico.svg),url(../img/grafico.svg), linear-gradient(to right, black, rgba(black, .5)), url(../img/header.webp);
+  /*background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);*/
+  }
+.header__navegacion{
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
 
+.header__contenido{
+  margin: 0 auto;
+}
+.header__enlace:hover{
+  color: #007df4;
+}
 .auth {
     width: min(95%, 60rem);
     margin: 0 auto;    
@@ -352,7 +372,6 @@ h3 {
     text-align: center;
     font-weight: bold;
 }
-
 
 .formulario{
   display: flex;
@@ -388,6 +407,7 @@ h3 {
   display: inline-block;
 width: auto;
 align-self: flex-start;
+text-transform: uppercase;
 }
 .formulario__submit{
   background-color: #007df4;
@@ -413,6 +433,180 @@ align-self: flex-start;
   color: black;
   font-size: 2rem;
   font-weight: 400;
+}
+.texto-fluido{
+  font-size: clamp(1rem,5rem,8rem);
+}
+.header__logo{
+  text-align: center;
+}
+.header__texto{
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  margin: 2rem 0;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+.header__enlace{
+  color: white;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.header__texto--modalidad{
+  font-size: 2.5rem;
+}
+.barra{
+  background-color: #007df4;
+}
+.barra__contenido{
+  width: min(95%,120rem);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.barra__logo{
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: clamp(1rem,2.5rem,4rem);
+  text-align: center;
+}
+.navegacion{
+  display: flex;
+  flex-direction: column;
+}
+.navegacion__enlace{
+  font-size: 2rem;
+  color: white;
+  padding: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+.navegacion__enlace:hover{
+  background-color: white;
+  color: #007df4;
+  
+}
+.footer{
+  background-color: #007df4;
+  margin-top: 5rem;
+  padding-top: 3rem;
+}
+.footer__logo{
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: clamp(1rem,5rem,10rem);
+  
+}
+.footer__texto{
+  line-height: 2;
+  text-align: center;
+
+}
+.footer__grid{
+  width: min(95%,120rem);
+  margin: 0 auto;
+}
+.footer__copyright{
+  background-color: black;
+  color: white;
+  margin: 3rem 0 0 0;
+  padding: 2rem 0;
+  text-align: center;
+  font-weight: 300;
+}
+.footer__copyright--regular{
+  font-weight: bold;
+}
+.menu-redes{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 4rem 0;
+}
+.menu-redes__enlace::before{
+  color: white;
+  font-size: 5rem;
+  display: inline-block;
+  font-style: normal;
+  text-rendering: auto;
+  webkit-font-smoothing: antialiased;
+
+}
+.menu-redes__enlace[href*="https://facebook.com"]::before{
+  content: "\f39e";
+}
+.menu-redes__enlace[href*="https://facebook.com"]::before {
+  content: "\f39e";
+}
+.menu-redes__enlace[href*="https://github.com"]::before {
+  content: "\f09b";
+}
+
+.menu-redes__enlace[href*="https://tiktok.com"]::before {
+  content: "\e07b";
+}
+.menu-redes__enlace[href*="https://instagram.com"]::before {
+  content: "\f16d";
+}
+.menu-redes__enlace[href*="https://youtube.com"]::before {
+  content: "\f167";
+}
+.menu-redes__enlace[href*="https://twitter.com"]::before {
+  content: "\f099";
+}
+@media (min-width: 768px) { 
+  .menu-redes{
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 768px) { 
+    .footer__grid{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 2rem;
+    }
+    .footer__texto{
+      text-align: left;
+    }
+}
+@media (min-width: 1024px) { 
+    .barra__contenido{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .barra__logo{
+      text-align: left;
+      margin-bottom: 1;
+    }
+    .navegacion{
+      flex-direction: row;
+    }
+}
+@media (min-width: 768px ) { 
+  .header__texto{
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) { 
+  .header__navegacion{
+    justify-content: flex-end;
+  }
+  .header__contenido{
+    padding-top: 5rem;
+  }
+  .header__logo{
+    text-align: left;
+    display: inline-block;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
