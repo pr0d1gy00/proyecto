@@ -3,7 +3,11 @@
     </h2>
     <p class="auth__text">Inicia sesion en devwebcamp</p>
 
-    <form action="" class="formulario">
+    <?php
+        require_once __DIR__ . '/../templates/alertas.php';
+    ?>
+
+    <form method="POST" action="/login" class="formulario">
         <div class="formulario__campo">
             <label for="" class="formulario__label">Email</label>
             <input type="email" class="formulario__input"
