@@ -45,9 +45,14 @@ class Email {
 
          //Enviar el mail
         $mail->send();
+        if($mail->send()){
+            echo 'Message has been sent';
+        }
+        else{
+            echo 'Mailer error: '.$mail->ErrorInfo;
+        }
 
     }
-
     public function enviarInstrucciones() {
 
         // create a new object

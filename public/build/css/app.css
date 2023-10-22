@@ -562,6 +562,23 @@ text-transform: uppercase;
 .menu-redes__enlace[href*="https://twitter.com"]::before {
   content: "\f099";
 }
+.alerta{
+  padding: 1.5rem 1.5rem 1.5rem 3rem;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.alerta__error{
+  background-color: rgba(169, 0, 0, .5);
+  border-left: .5rem solid rgb(169, 0, 0);
+  color: rgb(169, 0, 0);
+}
+.alerta__exito{
+  background-color: #02db02;
+  border-left: .5rem solid #02db02;
+  color: #02db02;
+}
 @media (min-width: 768px) { 
   .menu-redes{
     justify-content: flex-end;
